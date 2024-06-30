@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+	title="Portfolio de nextokoi - Desarrollador y Programador Web Front-end"
+	description="Contrata a nextokoi para crear tu sitio web o app web. Desarrollador Web Front-end. Especializado en crear aplicaciones únicas."
+>
+	<main class="px-4">
+		<SectionContainer class="pt-44 pb-20">
+			<img 
+			class="rounded-full size-12" 
+			src="https://avatars.githubusercontent.com/u/85761293?v=4" 
+			alt="photo" width="60" height="60" />
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex gap-x-4 pb-6 lg:pb-10">
+				Hey, soy nextokoi
+				<a
+					href="https://www.linkedin.com/in/nespersua/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-pretty max-w-[700px]">
+				Desarrollador web front-end. De Canarias, España.
+				<span class="text-blue-200/85"
+					>Especializado en aplicaciones web innovadoras y
+					responsivas.</span
+				>
+				<span class="text-yellow-200/80"
+					>Transformo tus ideas en experiencias digitales
+					inolvidables.</span
+				>
+			</h2>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/nespersua/">
+					<LinkedInIcon class="size-4 md:size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/nextokoi">
+					<GitHubIcon class="size-4 md:size-6" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="https://github.com/nextokoi">
+					<MailIcon class="size-4 md:size-6" />
+					nextokoi.dev@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<BriefcaseIcon class="size-7"/>
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<CodeIcon class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>
